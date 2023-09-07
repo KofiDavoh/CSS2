@@ -31,6 +31,10 @@ p {
     margin: 0;
 }
 
+body.dark {
+    background-color: #292C35;
+}
+
 h1,
 h2,
 h3 {
@@ -113,5 +117,40 @@ section{
 .part2 h2,
 .part3 h2 {
     color: var(--clr-primary-200);
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.label{
+    background-color: #111;
+    display: flex;
+    border-radius: 50px;
+    position: relative;
+    padding: 5px;
+    height: 26px;
+    width: 50px;
+    box-sizing: border-box;
+}
+
+.ball {
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 22px;
+    width: 22px;
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball {
+    transform: translateX(24px);
+}
+
+body.dark p {
+    color: #fff;
 }
 
